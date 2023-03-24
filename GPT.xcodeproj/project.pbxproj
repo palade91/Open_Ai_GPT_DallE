@@ -8,19 +8,26 @@
 
 /* Begin PBXBuildFile section */
 		75EFD0D329CDC19400837EF1 /* GPTApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75EFD0D229CDC19400837EF1 /* GPTApp.swift */; };
-		75EFD0D529CDC19400837EF1 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75EFD0D429CDC19400837EF1 /* ContentView.swift */; };
+		75EFD0D529CDC19400837EF1 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75EFD0D429CDC19400837EF1 /* MainView.swift */; };
 		75EFD0D729CDC19600837EF1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 75EFD0D629CDC19600837EF1 /* Assets.xcassets */; };
 		75EFD0DB29CDC19600837EF1 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 75EFD0DA29CDC19600837EF1 /* Preview Assets.xcassets */; };
 		75EFD0E329CDC31100837EF1 /* OpenAIKit in Frameworks */ = {isa = PBXBuildFile; productRef = 75EFD0E229CDC31100837EF1 /* OpenAIKit */; };
+		75EFD0EA29CE40FC00837EF1 /* ActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75EFD0E929CE40FC00837EF1 /* ActivityIndicator.swift */; };
+		75EFD0EE29CE413100837EF1 /* CustomColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75EFD0ED29CE413100837EF1 /* CustomColor.swift */; };
+		75EFD0F029CE416100837EF1 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75EFD0EF29CE416100837EF1 /* MainViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		75EFD0CF29CDC19400837EF1 /* GPT.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GPT.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		75EFD0D229CDC19400837EF1 /* GPTApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GPTApp.swift; sourceTree = "<group>"; };
-		75EFD0D429CDC19400837EF1 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		75EFD0D429CDC19400837EF1 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		75EFD0D629CDC19600837EF1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		75EFD0D829CDC19600837EF1 /* GPT.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = GPT.entitlements; sourceTree = "<group>"; };
 		75EFD0DA29CDC19600837EF1 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		75EFD0E629CDC8A400837EF1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		75EFD0E929CE40FC00837EF1 /* ActivityIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityIndicator.swift; sourceTree = "<group>"; };
+		75EFD0ED29CE413100837EF1 /* CustomColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomColor.swift; sourceTree = "<group>"; };
+		75EFD0EF29CE416100837EF1 /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,8 +61,12 @@
 		75EFD0D129CDC19400837EF1 /* GPT */ = {
 			isa = PBXGroup;
 			children = (
+				75EFD0E629CDC8A400837EF1 /* Info.plist */,
 				75EFD0D229CDC19400837EF1 /* GPTApp.swift */,
-				75EFD0D429CDC19400837EF1 /* ContentView.swift */,
+				75EFD0D429CDC19400837EF1 /* MainView.swift */,
+				75EFD0EF29CE416100837EF1 /* MainViewModel.swift */,
+				75EFD0EB29CE410D00837EF1 /* Views */,
+				75EFD0EC29CE411600837EF1 /* Helpers */,
 				75EFD0D629CDC19600837EF1 /* Assets.xcassets */,
 				75EFD0D829CDC19600837EF1 /* GPT.entitlements */,
 				75EFD0D929CDC19600837EF1 /* Preview Content */,
@@ -69,6 +80,22 @@
 				75EFD0DA29CDC19600837EF1 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		75EFD0EB29CE410D00837EF1 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				75EFD0E929CE40FC00837EF1 /* ActivityIndicator.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		75EFD0EC29CE411600837EF1 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				75EFD0ED29CE413100837EF1 /* CustomColor.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -147,7 +174,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				75EFD0D529CDC19400837EF1 /* ContentView.swift in Sources */,
+				75EFD0F029CE416100837EF1 /* MainViewModel.swift in Sources */,
+				75EFD0D529CDC19400837EF1 /* MainView.swift in Sources */,
+				75EFD0EA29CE40FC00837EF1 /* ActivityIndicator.swift in Sources */,
+				75EFD0EE29CE413100837EF1 /* CustomColor.swift in Sources */,
 				75EFD0D329CDC19400837EF1 /* GPTApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -277,6 +307,7 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = GPT/Info.plist;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
@@ -285,12 +316,12 @@
 				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 13.1;
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.catalin-palade.GPT";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -315,6 +346,7 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = GPT/Info.plist;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
@@ -323,12 +355,12 @@
 				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 13.1;
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.catalin-palade.GPT";
 				PRODUCT_NAME = "$(TARGET_NAME)";
