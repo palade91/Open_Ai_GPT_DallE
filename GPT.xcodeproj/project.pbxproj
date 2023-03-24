@@ -11,6 +11,7 @@
 		75EFD0D529CDC19400837EF1 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75EFD0D429CDC19400837EF1 /* ContentView.swift */; };
 		75EFD0D729CDC19600837EF1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 75EFD0D629CDC19600837EF1 /* Assets.xcassets */; };
 		75EFD0DB29CDC19600837EF1 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 75EFD0DA29CDC19600837EF1 /* Preview Assets.xcassets */; };
+		75EFD0E329CDC31100837EF1 /* OpenAIKit in Frameworks */ = {isa = PBXBuildFile; productRef = 75EFD0E229CDC31100837EF1 /* OpenAIKit */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +28,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				75EFD0E329CDC31100837EF1 /* OpenAIKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -85,6 +87,9 @@
 			dependencies = (
 			);
 			name = GPT;
+			packageProductDependencies = (
+				75EFD0E229CDC31100837EF1 /* OpenAIKit */,
+			);
 			productName = GPT;
 			productReference = 75EFD0CF29CDC19400837EF1 /* GPT.app */;
 			productType = "com.apple.product-type.application";
@@ -113,6 +118,9 @@
 				Base,
 			);
 			mainGroup = 75EFD0C629CDC19400837EF1;
+			packageReferences = (
+				75EFD0E129CDC31100837EF1 /* XCRemoteSwiftPackageReference "openai-kit" */,
+			);
 			productRefGroup = 75EFD0D029CDC19400837EF1 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -354,6 +362,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		75EFD0E129CDC31100837EF1 /* XCRemoteSwiftPackageReference "openai-kit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/dylanshine/openai-kit.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		75EFD0E229CDC31100837EF1 /* OpenAIKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 75EFD0E129CDC31100837EF1 /* XCRemoteSwiftPackageReference "openai-kit" */;
+			productName = OpenAIKit;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 75EFD0C729CDC19400837EF1 /* Project object */;
 }
