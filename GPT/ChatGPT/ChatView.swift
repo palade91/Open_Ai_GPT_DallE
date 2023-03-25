@@ -10,30 +10,25 @@ import OpenAISwift
 
 struct ChatView: View {
     
-    @ObservedObject var viewModel: MainViewModel
+    @ObservedObject var viewModel: ChatGPTViewModel
     
     @State private var prompt: String = ""
     
     var body: some View {
         VStack(alignment: .leading, spacing: 2) {
             ScrollView(.vertical, showsIndicators: false) {
-                ScrollViewReader { value in
-                    VStack(alignment: .leading, spacing: 5) {
-                        ForEach(viewModel.chats, id: \.id) { chat in
-                            Text(chat.chat.content)
-                                .foregroundColor(Color(uiColor: chat.chat.role == .assistant ? .yellow : .label))
-                                .id(chat.id)
-                        }
-                    }
-                    .padding(.horizontal, 5)
-                    .animation(.default, value: viewModel.chats)
-                    .onChange(of: viewModel.chats) { _ in
-                        value.scrollTo(viewModel.chats.last?.id, anchor: .bottom)
+                VStack(alignment: .leading, spacing: 5) {
+                    ForEach(viewModel.chats, id: \.self) { chat in
+                        Text(chat.content)
+                            .foregroundColor(chat.role == .assistant ? .yellow : Color(uiColor: .label))
                     }
                 }
+                .padding(.horizontal, 5)
+                .animation(.default, value: viewModel.chats)
             }
             
             TextField("Enter prompt here", text: $prompt, axis: .vertical)
+                .frame(minHeight: 30)
                 .autocorrectionDisabled(true)
                 .lineLimit(1...10)
                 .background(Color(uiColor: UIColor.systemGray).opacity(0.3))

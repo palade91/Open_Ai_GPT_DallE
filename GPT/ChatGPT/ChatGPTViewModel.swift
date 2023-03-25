@@ -1,5 +1,5 @@
 //
-//  MainViewModel.swift
+//  ChatGPTViewModel.swift
 //  GPT
 //
 //  Created by Catalin Palade on 24/03/2023.
@@ -8,7 +8,7 @@
 import SwiftUI
 import OpenAISwift
 
-class MainViewModel: ObservableObject {
+class ChatGPTViewModel: ObservableObject {
     
     enum State {
         case loading
@@ -18,7 +18,7 @@ class MainViewModel: ObservableObject {
     var openAI: OpenAISwift
     
     @Published var state: State = .loaded
-    @Published var chats: [CustomChatMessages] = []
+    @Published var chats: [ChatMessage] = []
     
     init() {
         let apiKey: String = ProcessInfo.processInfo.environment["OPENAI_API_KEY"]!
@@ -29,7 +29,7 @@ class MainViewModel: ObservableObject {
         state = .loading
         let newChat = ChatMessage(role: .user, content: prompt)
         
-        chats.append(CustomChatMessages(chat: newChat))
+        chats.append(newChat)
         
         Task {
             await getGPTResponse(chats: chats)
@@ -37,12 +37,11 @@ class MainViewModel: ObservableObject {
     }
     
     @MainActor
-    private func getGPTResponse(chats: [CustomChatMessages]) async {
+    private func getGPTResponse(chats: [ChatMessage]) async {
         do {
-            let gptChats = chats.map({ $0.chat })
-            let result = try await openAI.sendChat(with: gptChats)
+            let result = try await openAI.sendChat(with: chats)
             if let chat = result.choices.first {
-                self.chats.append(CustomChatMessages(chat: chat.message))
+                self.chats.append(chat.message)
             }
             self.state = .loaded
         } catch let error {

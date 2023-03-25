@@ -8,30 +8,34 @@
 
 /* Begin PBXBuildFile section */
 		75EFD0D329CDC19400837EF1 /* GPTApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75EFD0D229CDC19400837EF1 /* GPTApp.swift */; };
-		75EFD0D529CDC19400837EF1 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75EFD0D429CDC19400837EF1 /* MainView.swift */; };
+		75EFD0D529CDC19400837EF1 /* ChatGPTView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75EFD0D429CDC19400837EF1 /* ChatGPTView.swift */; };
 		75EFD0D729CDC19600837EF1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 75EFD0D629CDC19600837EF1 /* Assets.xcassets */; };
 		75EFD0DB29CDC19600837EF1 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 75EFD0DA29CDC19600837EF1 /* Preview Assets.xcassets */; };
 		75EFD0EA29CE40FC00837EF1 /* ActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75EFD0E929CE40FC00837EF1 /* ActivityIndicator.swift */; };
 		75EFD0EE29CE413100837EF1 /* Ext+Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75EFD0ED29CE413100837EF1 /* Ext+Color.swift */; };
-		75EFD0F029CE416100837EF1 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75EFD0EF29CE416100837EF1 /* MainViewModel.swift */; };
+		75EFD0F029CE416100837EF1 /* ChatGPTViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75EFD0EF29CE416100837EF1 /* ChatGPTViewModel.swift */; };
 		75EFD0F329CE435D00837EF1 /* OpenAISwift in Frameworks */ = {isa = PBXBuildFile; productRef = 75EFD0F229CE435D00837EF1 /* OpenAISwift */; };
-		75EFD0FA29CF0AD500837EF1 /* CustomChatMessages.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75EFD0F929CF0AD500837EF1 /* CustomChatMessages.swift */; };
 		75EFD0FC29CF0B4D00837EF1 /* ChatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75EFD0FB29CF0B4D00837EF1 /* ChatView.swift */; };
+		75EFD0FE29CF595400837EF1 /* GPTTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75EFD0FD29CF595400837EF1 /* GPTTabView.swift */; };
+		75EFD10229CF5A0900837EF1 /* DallEView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75EFD10129CF5A0900837EF1 /* DallEView.swift */; };
+		75EFD10429CF5D4F00837EF1 /* Ext+ChatMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75EFD10329CF5D4F00837EF1 /* Ext+ChatMessage.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		75EFD0CF29CDC19400837EF1 /* GPT.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GPT.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		75EFD0D229CDC19400837EF1 /* GPTApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GPTApp.swift; sourceTree = "<group>"; };
-		75EFD0D429CDC19400837EF1 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		75EFD0D429CDC19400837EF1 /* ChatGPTView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatGPTView.swift; sourceTree = "<group>"; };
 		75EFD0D629CDC19600837EF1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		75EFD0D829CDC19600837EF1 /* GPT.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = GPT.entitlements; sourceTree = "<group>"; };
 		75EFD0DA29CDC19600837EF1 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		75EFD0E629CDC8A400837EF1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		75EFD0E929CE40FC00837EF1 /* ActivityIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityIndicator.swift; sourceTree = "<group>"; };
 		75EFD0ED29CE413100837EF1 /* Ext+Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Ext+Color.swift"; sourceTree = "<group>"; };
-		75EFD0EF29CE416100837EF1 /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
-		75EFD0F929CF0AD500837EF1 /* CustomChatMessages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomChatMessages.swift; sourceTree = "<group>"; };
+		75EFD0EF29CE416100837EF1 /* ChatGPTViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatGPTViewModel.swift; sourceTree = "<group>"; };
 		75EFD0FB29CF0B4D00837EF1 /* ChatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatView.swift; sourceTree = "<group>"; };
+		75EFD0FD29CF595400837EF1 /* GPTTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GPTTabView.swift; sourceTree = "<group>"; };
+		75EFD10129CF5A0900837EF1 /* DallEView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DallEView.swift; sourceTree = "<group>"; };
+		75EFD10329CF5D4F00837EF1 /* Ext+ChatMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Ext+ChatMessage.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,10 +71,9 @@
 			children = (
 				75EFD0E629CDC8A400837EF1 /* Info.plist */,
 				75EFD0D229CDC19400837EF1 /* GPTApp.swift */,
-				75EFD0D429CDC19400837EF1 /* MainView.swift */,
-				75EFD0FB29CF0B4D00837EF1 /* ChatView.swift */,
-				75EFD0EF29CE416100837EF1 /* MainViewModel.swift */,
-				75EFD0F829CF0AC600837EF1 /* Model */,
+				75EFD0FD29CF595400837EF1 /* GPTTabView.swift */,
+				75EFD0FF29CF599600837EF1 /* ChatGPT */,
+				75EFD10029CF59DD00837EF1 /* DallE */,
 				75EFD0EB29CE410D00837EF1 /* Views */,
 				75EFD0EC29CE411600837EF1 /* Extensions */,
 				75EFD0D629CDC19600837EF1 /* Assets.xcassets */,
@@ -100,16 +103,27 @@
 			isa = PBXGroup;
 			children = (
 				75EFD0ED29CE413100837EF1 /* Ext+Color.swift */,
+				75EFD10329CF5D4F00837EF1 /* Ext+ChatMessage.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
 		};
-		75EFD0F829CF0AC600837EF1 /* Model */ = {
+		75EFD0FF29CF599600837EF1 /* ChatGPT */ = {
 			isa = PBXGroup;
 			children = (
-				75EFD0F929CF0AD500837EF1 /* CustomChatMessages.swift */,
+				75EFD0D429CDC19400837EF1 /* ChatGPTView.swift */,
+				75EFD0EF29CE416100837EF1 /* ChatGPTViewModel.swift */,
+				75EFD0FB29CF0B4D00837EF1 /* ChatView.swift */,
 			);
-			path = Model;
+			path = ChatGPT;
+			sourceTree = "<group>";
+		};
+		75EFD10029CF59DD00837EF1 /* DallE */ = {
+			isa = PBXGroup;
+			children = (
+				75EFD10129CF5A0900837EF1 /* DallEView.swift */,
+			);
+			path = DallE;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -188,13 +202,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				75EFD0F029CE416100837EF1 /* MainViewModel.swift in Sources */,
-				75EFD0D529CDC19400837EF1 /* MainView.swift in Sources */,
+				75EFD0FE29CF595400837EF1 /* GPTTabView.swift in Sources */,
+				75EFD0F029CE416100837EF1 /* ChatGPTViewModel.swift in Sources */,
+				75EFD0D529CDC19400837EF1 /* ChatGPTView.swift in Sources */,
+				75EFD10429CF5D4F00837EF1 /* Ext+ChatMessage.swift in Sources */,
 				75EFD0EA29CE40FC00837EF1 /* ActivityIndicator.swift in Sources */,
 				75EFD0EE29CE413100837EF1 /* Ext+Color.swift in Sources */,
 				75EFD0FC29CF0B4D00837EF1 /* ChatView.swift in Sources */,
-				75EFD0FA29CF0AD500837EF1 /* CustomChatMessages.swift in Sources */,
 				75EFD0D329CDC19400837EF1 /* GPTApp.swift in Sources */,
+				75EFD10229CF5A0900837EF1 /* DallEView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

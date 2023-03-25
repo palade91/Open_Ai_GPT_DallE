@@ -1,5 +1,5 @@
 //
-//  MainView.swift
+//  ChatGPTView.swift
 //  GPT
 //
 //  Created by Catalin Palade on 24/03/2023.
@@ -7,9 +7,9 @@
 
 import SwiftUI
 
-struct MainView: View {
+struct ChatGPTView: View {
     
-    @StateObject private var viewModel = MainViewModel()
+    @StateObject private var viewModel = ChatGPTViewModel()
     
     var body: some View {
         VStack(alignment: .center, spacing: 10) {
@@ -32,6 +32,6 @@ struct MainView: View {
         }
         .frame(maxWidth: .greatestFiniteMagnitude,
                maxHeight: .greatestFiniteMagnitude)
-        .background(Color.greenAI.ignoresSafeArea())
+        .background(Color.greenAI.edgesIgnoringSafeArea(.top))
     }
 }
