@@ -11,10 +11,12 @@
 		75EFD0D529CDC19400837EF1 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75EFD0D429CDC19400837EF1 /* MainView.swift */; };
 		75EFD0D729CDC19600837EF1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 75EFD0D629CDC19600837EF1 /* Assets.xcassets */; };
 		75EFD0DB29CDC19600837EF1 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 75EFD0DA29CDC19600837EF1 /* Preview Assets.xcassets */; };
-		75EFD0E329CDC31100837EF1 /* OpenAIKit in Frameworks */ = {isa = PBXBuildFile; productRef = 75EFD0E229CDC31100837EF1 /* OpenAIKit */; };
 		75EFD0EA29CE40FC00837EF1 /* ActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75EFD0E929CE40FC00837EF1 /* ActivityIndicator.swift */; };
-		75EFD0EE29CE413100837EF1 /* CustomColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75EFD0ED29CE413100837EF1 /* CustomColor.swift */; };
+		75EFD0EE29CE413100837EF1 /* Ext+Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75EFD0ED29CE413100837EF1 /* Ext+Color.swift */; };
 		75EFD0F029CE416100837EF1 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75EFD0EF29CE416100837EF1 /* MainViewModel.swift */; };
+		75EFD0F329CE435D00837EF1 /* OpenAISwift in Frameworks */ = {isa = PBXBuildFile; productRef = 75EFD0F229CE435D00837EF1 /* OpenAISwift */; };
+		75EFD0FA29CF0AD500837EF1 /* CustomChatMessages.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75EFD0F929CF0AD500837EF1 /* CustomChatMessages.swift */; };
+		75EFD0FC29CF0B4D00837EF1 /* ChatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75EFD0FB29CF0B4D00837EF1 /* ChatView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,8 +28,10 @@
 		75EFD0DA29CDC19600837EF1 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		75EFD0E629CDC8A400837EF1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		75EFD0E929CE40FC00837EF1 /* ActivityIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityIndicator.swift; sourceTree = "<group>"; };
-		75EFD0ED29CE413100837EF1 /* CustomColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomColor.swift; sourceTree = "<group>"; };
+		75EFD0ED29CE413100837EF1 /* Ext+Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Ext+Color.swift"; sourceTree = "<group>"; };
 		75EFD0EF29CE416100837EF1 /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
+		75EFD0F929CF0AD500837EF1 /* CustomChatMessages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomChatMessages.swift; sourceTree = "<group>"; };
+		75EFD0FB29CF0B4D00837EF1 /* ChatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -35,7 +39,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				75EFD0E329CDC31100837EF1 /* OpenAIKit in Frameworks */,
+				75EFD0F329CE435D00837EF1 /* OpenAISwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -64,9 +68,11 @@
 				75EFD0E629CDC8A400837EF1 /* Info.plist */,
 				75EFD0D229CDC19400837EF1 /* GPTApp.swift */,
 				75EFD0D429CDC19400837EF1 /* MainView.swift */,
+				75EFD0FB29CF0B4D00837EF1 /* ChatView.swift */,
 				75EFD0EF29CE416100837EF1 /* MainViewModel.swift */,
+				75EFD0F829CF0AC600837EF1 /* Model */,
 				75EFD0EB29CE410D00837EF1 /* Views */,
-				75EFD0EC29CE411600837EF1 /* Helpers */,
+				75EFD0EC29CE411600837EF1 /* Extensions */,
 				75EFD0D629CDC19600837EF1 /* Assets.xcassets */,
 				75EFD0D829CDC19600837EF1 /* GPT.entitlements */,
 				75EFD0D929CDC19600837EF1 /* Preview Content */,
@@ -90,12 +96,20 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
-		75EFD0EC29CE411600837EF1 /* Helpers */ = {
+		75EFD0EC29CE411600837EF1 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				75EFD0ED29CE413100837EF1 /* CustomColor.swift */,
+				75EFD0ED29CE413100837EF1 /* Ext+Color.swift */,
 			);
-			path = Helpers;
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		75EFD0F829CF0AC600837EF1 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				75EFD0F929CF0AD500837EF1 /* CustomChatMessages.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -115,7 +129,7 @@
 			);
 			name = GPT;
 			packageProductDependencies = (
-				75EFD0E229CDC31100837EF1 /* OpenAIKit */,
+				75EFD0F229CE435D00837EF1 /* OpenAISwift */,
 			);
 			productName = GPT;
 			productReference = 75EFD0CF29CDC19400837EF1 /* GPT.app */;
@@ -146,7 +160,7 @@
 			);
 			mainGroup = 75EFD0C629CDC19400837EF1;
 			packageReferences = (
-				75EFD0E129CDC31100837EF1 /* XCRemoteSwiftPackageReference "openai-kit" */,
+				75EFD0F129CE435D00837EF1 /* XCRemoteSwiftPackageReference "OpenAISwift" */,
 			);
 			productRefGroup = 75EFD0D029CDC19400837EF1 /* Products */;
 			projectDirPath = "";
@@ -177,7 +191,9 @@
 				75EFD0F029CE416100837EF1 /* MainViewModel.swift in Sources */,
 				75EFD0D529CDC19400837EF1 /* MainView.swift in Sources */,
 				75EFD0EA29CE40FC00837EF1 /* ActivityIndicator.swift in Sources */,
-				75EFD0EE29CE413100837EF1 /* CustomColor.swift in Sources */,
+				75EFD0EE29CE413100837EF1 /* Ext+Color.swift in Sources */,
+				75EFD0FC29CF0B4D00837EF1 /* ChatView.swift in Sources */,
+				75EFD0FA29CF0AD500837EF1 /* CustomChatMessages.swift in Sources */,
 				75EFD0D329CDC19400837EF1 /* GPTApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -235,6 +251,8 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -287,6 +305,8 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SWIFT_COMPILATION_MODE = wholemodule;
@@ -396,9 +416,9 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		75EFD0E129CDC31100837EF1 /* XCRemoteSwiftPackageReference "openai-kit" */ = {
+		75EFD0F129CE435D00837EF1 /* XCRemoteSwiftPackageReference "OpenAISwift" */ = {
 			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/dylanshine/openai-kit.git";
+			repositoryURL = "https://github.com/adamrushy/OpenAISwift.git";
 			requirement = {
 				kind = upToNextMajorVersion;
 				minimumVersion = 1.0.0;
@@ -407,10 +427,10 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		75EFD0E229CDC31100837EF1 /* OpenAIKit */ = {
+		75EFD0F229CE435D00837EF1 /* OpenAISwift */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 75EFD0E129CDC31100837EF1 /* XCRemoteSwiftPackageReference "openai-kit" */;
-			productName = OpenAIKit;
+			package = 75EFD0F129CE435D00837EF1 /* XCRemoteSwiftPackageReference "OpenAISwift" */;
+			productName = OpenAISwift;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

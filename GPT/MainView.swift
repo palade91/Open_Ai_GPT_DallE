@@ -12,33 +12,26 @@ struct MainView: View {
     @StateObject private var viewModel = MainViewModel()
     
     var body: some View {
-        ZStack {
-            VStack {
-                Image("open_ai")
-                    .resizable()
-                    .renderingMode(.template)
-                    .foregroundColor(Color(uiColor: .label))
-                    .frame(width: 50, height: 50)
-                    .padding(.top, 60)
-                Spacer()
+        VStack(alignment: .center, spacing: 10) {
+            Group {
+                switch viewModel.state {
+                case .loading:
+                    ActivityIndicator()
+                case .loaded:
+                    Image("open_ai")
+                        .resizable()
+                        .renderingMode(.template)
+                        .foregroundColor(Color(uiColor: .label))
+                        .frame(width: 50, height: 50)
+                }
             }
-            switch viewModel.viewState {
-            case .loading:
-                ActivityIndicator()
-            case .loaded(let string):
-                Text(string)
-                    .foregroundColor(Color(uiColor: .label))
-            }
+            .animation(.default, value: viewModel.state)
+            .frame(height: 50)
+            
+            ChatView(viewModel: viewModel)
         }
-        .ignoresSafeArea()
         .frame(maxWidth: .greatestFiniteMagnitude,
                maxHeight: .greatestFiniteMagnitude)
-        .background(CustomColor.greenAI)
+        .background(Color.greenAI.ignoresSafeArea())
     }
 }
-
-//struct MainView_Previews: PreviewProvider {
-//    static var previews: some View {
-//        MainView()
-//    }
-//}
