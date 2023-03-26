@@ -20,6 +20,9 @@
 		75EFD10429CF5D4F00837EF1 /* Ext+ChatMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75EFD10329CF5D4F00837EF1 /* Ext+ChatMessage.swift */; };
 		75EFD10629D0442E00837EF1 /* OpenAIUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75EFD10529D0442E00837EF1 /* OpenAIUseCase.swift */; };
 		75EFD10C29D06EB400837EF1 /* OpenAISwift in Frameworks */ = {isa = PBXBuildFile; productRef = 75EFD10B29D06EB400837EF1 /* OpenAISwift */; };
+		75EFD10E29D07C8100837EF1 /* DallEViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75EFD10D29D07C8100837EF1 /* DallEViewModel.swift */; };
+		75EFD11029D080A800837EF1 /* DallEImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75EFD10F29D080A800837EF1 /* DallEImage.swift */; };
+		75EFD11229D0842E00837EF1 /* PromptView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75EFD11129D0842E00837EF1 /* PromptView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +41,9 @@
 		75EFD10129CF5A0900837EF1 /* DallEView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DallEView.swift; sourceTree = "<group>"; };
 		75EFD10329CF5D4F00837EF1 /* Ext+ChatMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Ext+ChatMessage.swift"; sourceTree = "<group>"; };
 		75EFD10529D0442E00837EF1 /* OpenAIUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenAIUseCase.swift; sourceTree = "<group>"; };
+		75EFD10D29D07C8100837EF1 /* DallEViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DallEViewModel.swift; sourceTree = "<group>"; };
+		75EFD10F29D080A800837EF1 /* DallEImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DallEImage.swift; sourceTree = "<group>"; };
+		75EFD11129D0842E00837EF1 /* PromptView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PromptView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +104,7 @@
 			isa = PBXGroup;
 			children = (
 				75EFD0E929CE40FC00837EF1 /* ActivityIndicator.swift */,
+				75EFD11129D0842E00837EF1 /* PromptView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -125,6 +132,8 @@
 			isa = PBXGroup;
 			children = (
 				75EFD10129CF5A0900837EF1 /* DallEView.swift */,
+				75EFD10D29D07C8100837EF1 /* DallEViewModel.swift */,
+				75EFD10F29D080A800837EF1 /* DallEImage.swift */,
 			);
 			path = DallE;
 			sourceTree = "<group>";
@@ -209,11 +218,14 @@
 				75EFD0F029CE416100837EF1 /* ChatGPTViewModel.swift in Sources */,
 				75EFD0D529CDC19400837EF1 /* ChatGPTView.swift in Sources */,
 				75EFD10429CF5D4F00837EF1 /* Ext+ChatMessage.swift in Sources */,
+				75EFD11029D080A800837EF1 /* DallEImage.swift in Sources */,
 				75EFD0EA29CE40FC00837EF1 /* ActivityIndicator.swift in Sources */,
 				75EFD0EE29CE413100837EF1 /* Ext+Color.swift in Sources */,
 				75EFD0FC29CF0B4D00837EF1 /* ChatView.swift in Sources */,
+				75EFD10E29D07C8100837EF1 /* DallEViewModel.swift in Sources */,
 				75EFD0D329CDC19400837EF1 /* GPTApp.swift in Sources */,
 				75EFD10229CF5A0900837EF1 /* DallEView.swift in Sources */,
+				75EFD11229D0842E00837EF1 /* PromptView.swift in Sources */,
 				75EFD10629D0442E00837EF1 /* OpenAIUseCase.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -444,8 +456,8 @@
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/adamrushy/OpenAISwift.git";
 			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 1.0.0;
+				branch = main;
+				kind = branch;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */

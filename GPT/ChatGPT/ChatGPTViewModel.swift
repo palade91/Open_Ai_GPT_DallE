@@ -35,7 +35,7 @@ class ChatGPTViewModel: ObservableObject {
     private func getGPTResponse(chats: [ChatMessage]) async {
         do {
             let result = try await OpenAIUseCase.shared.openAI.sendChat(with: chats)
-            if let chat = result.choices.first {
+            if let chat = result.choices?.first {
                 self.chats.append(chat.message)
             }
             self.state = .loaded
