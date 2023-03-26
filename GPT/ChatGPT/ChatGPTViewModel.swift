@@ -15,15 +15,10 @@ class ChatGPTViewModel: ObservableObject {
         case loaded
     }
     
-    var openAI: OpenAISwift
-    
     @Published var state: State = .loaded
     @Published var chats: [ChatMessage] = []
     
-    init() {
-        let apiKey: String = ProcessInfo.processInfo.environment["OPENAI_API_KEY"]!
-        self.openAI = OpenAISwift(authToken: apiKey)
-    }
+    init() { }
     
     func sendNewPrompt(_ prompt: String) {
         state = .loading
@@ -39,7 +34,7 @@ class ChatGPTViewModel: ObservableObject {
     @MainActor
     private func getGPTResponse(chats: [ChatMessage]) async {
         do {
-            let result = try await openAI.sendChat(with: chats)
+            let result = try await OpenAIUseCase.shared.openAI.sendChat(with: chats)
             if let chat = result.choices.first {
                 self.chats.append(chat.message)
             }

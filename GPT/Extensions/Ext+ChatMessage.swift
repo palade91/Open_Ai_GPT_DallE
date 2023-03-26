@@ -17,3 +17,7 @@ extension ChatMessage: Hashable {
         hasher.combine(content)
     }
 }
+
+extension ChatMessage {
+    static var id: String = UUID().uuidString
+}
