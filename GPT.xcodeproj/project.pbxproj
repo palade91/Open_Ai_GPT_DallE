@@ -23,6 +23,7 @@
 		75EFD10E29D07C8100837EF1 /* DallEViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75EFD10D29D07C8100837EF1 /* DallEViewModel.swift */; };
 		75EFD11029D080A800837EF1 /* DallEImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75EFD10F29D080A800837EF1 /* DallEImage.swift */; };
 		75EFD11229D0842E00837EF1 /* PromptView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75EFD11129D0842E00837EF1 /* PromptView.swift */; };
+		75EFD11429D227E300837EF1 /* SaveButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75EFD11329D227E300837EF1 /* SaveButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +45,7 @@
 		75EFD10D29D07C8100837EF1 /* DallEViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DallEViewModel.swift; sourceTree = "<group>"; };
 		75EFD10F29D080A800837EF1 /* DallEImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DallEImage.swift; sourceTree = "<group>"; };
 		75EFD11129D0842E00837EF1 /* PromptView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PromptView.swift; sourceTree = "<group>"; };
+		75EFD11329D227E300837EF1 /* SaveButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +107,7 @@
 			children = (
 				75EFD0E929CE40FC00837EF1 /* ActivityIndicator.swift */,
 				75EFD11129D0842E00837EF1 /* PromptView.swift */,
+				75EFD11329D227E300837EF1 /* SaveButton.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -219,6 +222,7 @@
 				75EFD0D529CDC19400837EF1 /* ChatGPTView.swift in Sources */,
 				75EFD10429CF5D4F00837EF1 /* Ext+ChatMessage.swift in Sources */,
 				75EFD11029D080A800837EF1 /* DallEImage.swift in Sources */,
+				75EFD11429D227E300837EF1 /* SaveButton.swift in Sources */,
 				75EFD0EA29CE40FC00837EF1 /* ActivityIndicator.swift in Sources */,
 				75EFD0EE29CE413100837EF1 /* Ext+Color.swift in Sources */,
 				75EFD0FC29CF0B4D00837EF1 /* ChatView.swift in Sources */,
@@ -362,6 +366,7 @@
 				INFOPLIST_FILE = GPT/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = OpenAI;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.education";
+				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "Please allow access to save the image to Photo Library";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
@@ -403,6 +408,7 @@
 				INFOPLIST_FILE = GPT/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = OpenAI;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.education";
+				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "Please allow access to save the image to Photo Library";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
