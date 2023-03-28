@@ -63,10 +63,23 @@ struct ChatView: View {
                     
                 }
             }
-            PromptView(prompt: $prompt) {
-                if !prompt.isEmpty {
-                    viewModel.sendNewPrompt(prompt)
-                    prompt.removeAll()
+            HStack(alignment: .center, spacing: 5) {
+                if !viewModel.chats.isEmpty {
+                    Button {
+                        viewModel.clearChats()
+                    } label: {
+                        Image(systemName: "trash.fill")
+                            .renderingMode(.template)
+                            .foregroundColor(Color(uiColor: .label))
+                            .aspectRatio(contentMode: .fit)
+                            .frame(height: 30)
+                    }
+                }
+                PromptView(prompt: $prompt) {
+                    if !prompt.isEmpty {
+                        viewModel.sendNewPrompt(prompt)
+                        prompt.removeAll()
+                    }
                 }
             }
         }

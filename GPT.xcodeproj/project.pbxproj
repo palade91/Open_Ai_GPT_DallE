@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		757C2D9D29D35FC700C44625 /* UserDefaultsUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 757C2D9C29D35FC700C44625 /* UserDefaultsUseCase.swift */; };
 		75EFD0D329CDC19400837EF1 /* GPTApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75EFD0D229CDC19400837EF1 /* GPTApp.swift */; };
 		75EFD0D529CDC19400837EF1 /* ChatGPTView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75EFD0D429CDC19400837EF1 /* ChatGPTView.swift */; };
 		75EFD0D729CDC19600837EF1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 75EFD0D629CDC19600837EF1 /* Assets.xcassets */; };
@@ -27,6 +28,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		757C2D9C29D35FC700C44625 /* UserDefaultsUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsUseCase.swift; sourceTree = "<group>"; };
 		75EFD0CF29CDC19400837EF1 /* GPT.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GPT.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		75EFD0D229CDC19400837EF1 /* GPTApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GPTApp.swift; sourceTree = "<group>"; };
 		75EFD0D429CDC19400837EF1 /* ChatGPTView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatGPTView.swift; sourceTree = "<group>"; };
@@ -83,6 +85,7 @@
 				75EFD0D229CDC19400837EF1 /* GPTApp.swift */,
 				75EFD0FD29CF595400837EF1 /* GPTTabView.swift */,
 				75EFD10529D0442E00837EF1 /* OpenAIUseCase.swift */,
+				757C2D9C29D35FC700C44625 /* UserDefaultsUseCase.swift */,
 				75EFD0FF29CF599600837EF1 /* ChatGPT */,
 				75EFD10029CF59DD00837EF1 /* DallE */,
 				75EFD0EB29CE410D00837EF1 /* Views */,
@@ -226,6 +229,7 @@
 				75EFD0EA29CE40FC00837EF1 /* ActivityIndicator.swift in Sources */,
 				75EFD0EE29CE413100837EF1 /* Ext+Color.swift in Sources */,
 				75EFD0FC29CF0B4D00837EF1 /* ChatView.swift in Sources */,
+				757C2D9D29D35FC700C44625 /* UserDefaultsUseCase.swift in Sources */,
 				75EFD10E29D07C8100837EF1 /* DallEViewModel.swift in Sources */,
 				75EFD0D329CDC19400837EF1 /* GPTApp.swift in Sources */,
 				75EFD10229CF5A0900837EF1 /* DallEView.swift in Sources */,
